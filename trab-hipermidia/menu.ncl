@@ -7,7 +7,6 @@
 				<region id="rg_menu1" left="10%" top="60%" width="20%" height="20%" zIndex="2"/>
 				<region id="rg_menu2" left="40%" top="60%" width="20%" height="20%" zIndex="2"/>
 				<region id="rg_menu3" left="70%" top="60%" width="20%" height="20%" zIndex="2"/>
-				<region id="rg_slide" left="30%" top="20%" width="40%" height="40%" zIndex="2"/>
 			</region>
 		</regionBase>
 		
@@ -24,7 +23,6 @@
 			focusIndex="3" moveLeft="2" moveRight="1" 
 			focusBorderWidth="5" focusBorderColor="white"/>
 			
-			<descriptor id="desc_slide" region="rg_slide" />
 		</descriptorBase>
 		
 		<connectorBase>
@@ -37,20 +35,13 @@
 			<port id="p_menu1" component="menu1" />
 			<port id="p_menu2" component="menu2" />
 			<port id="p_menu3" component="menu3" />
-			<port id="p_slide" component="slide"/>
 			
 			<!--medias-->
 			<media id="menu1" src="media/button_xml.png" descriptor="desc_menu1"/>
 			<media id="menu2" src="media/button_desenvolvimento-web.png" descriptor="desc_menu2"/>
 			<media id="menu3" src="media/button_ncl.png" descriptor="desc_menu3"/>
-			<media id="slide" src="media/button_xml.png" descriptor="desc_slide"/>
-			<media id="slide2" src="media/button_desenvolvimento-web.png" descriptor="desc_slide"/>
 			
 			<!--links-->
-			<link xconnector="conB#onSelectionStart">
-				<bind role="onSelection" component="menu1"/>
-				<bind role="start" component="slide" />
-			</link>
 			
 			
 		</context>
