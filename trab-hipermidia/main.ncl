@@ -4,6 +4,7 @@
 	<head>
 		<importedDocumentBase>
 			<importNCL documentURI="menu.ncl" alias="menu"/>
+			<importNCL documentURI="nclpart.ncl" alias="nclpart"/>
 		</importedDocumentBase>
 		<regionBase>
 			<region id="rg_central" width="100%" height="100%" zIndex="1"/>
@@ -32,6 +33,14 @@
 			<bind role="start" component="cont_menu"/>
 		</link>
 		
+		<!--Link para ncl-->
+		<context id="cont_ncl" refer="nclpart#ctx_nclpart"/>
+		
+		<link xconnector="conB#onSelectionStart">
+			<bind role="onSelection" component="cont_menu" interface="p_menu3"/>
+			<bind role="start" component="cont_ncl">
+			</bind>
+		</link>
 			
 	</body>
 </ncl>
